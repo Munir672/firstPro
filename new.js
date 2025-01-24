@@ -20,7 +20,7 @@ app.get("/", (req, res) => {
 });
 
 // Serve the "mom.html" page at /pages/mom
-app.get("/pages/mom", (req, res) => {
+app.get("/mom", (req, res) => {
     res.sendFile(path.join(__dirname,"mom.html"));
 });
 
