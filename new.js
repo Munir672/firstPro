@@ -19,15 +19,15 @@ app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// Serve the "mom.html" page at /pages/mom
+// Serve the "mom.html" page at /mom
 app.get("/mom", (req, res) => {
-    res.sendFile(path.join(__dirname,"mom.html"));
+    res.sendFile(path.join(__dirname, "mom.html"));
 });
 
-// Serve static files (images, CSS, JS, etc.) from the "files" folder
-app.use(express.static(path.join(__dirname, "image")));  // Serve static files from 'files'
+// Serve static files (if any) from the root directory (like images, CSS, etc.)
+app.use(express.static(__dirname));  // Serve static files from the root folder
 
 // Handle 404 errors for any page not found
 app.get('/*', (req, res) => {
     res.status(404).send(`Page not found`);
-})
+});
