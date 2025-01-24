@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mom - A Special Tribute</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Background with New Color Palette */
+        body {
+            font-family: 'Helvetica', sans-serif;
+            color: #FEFAE0; /* Light Beige */
+            background: linear-gradient(135deg, #606C38, #283618); /* Olive Green & Dark Olive Green */
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+            animation: fadeInBody 2s ease-in-out;
+        }
+
+        @keyframes fadeInBody {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px;
+            background: rgba(0, 0, 0, 0.7);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            margin-bottom: 40px;
+            width: 80%;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #DDA15E; /* Warm Yellow */
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            animation: fadeInText 2s ease-in-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: #FEFAE0; /* Light Beige */
+            margin-top: 10px;
+            font-weight: 300;
+        }
+
+        @keyframes fadeInText {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* Main content section */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 40px;
+            padding: 20px;
+            max-width: 900px;
+            width: 100%;
+        }
+
+        .content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+
+        .content .image {
+            position: relative;
+            width: 250px;
+            height: 250px;
+            overflow: hidden;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.6);
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+        }
+
+        .content .image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 50%;
+        }
+
+        /* Hover Effect */
+        .content .image:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .content .image img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.6);
+        }
+
+        .content .text {
+            color: #FEFAE0; /* Light Beige */
+            max-width: 500px;
+            padding: 20px;
+        }
+
+        .content h2 {
+            font-size: 2.5rem;
+            color: #DDA15E; /* Warm Yellow */
+            margin-bottom: 20px;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+            color: #ddd;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Quote Section */
+        .quote {
+            margin-top: 50px;
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #DDA15E; /* Warm Yellow */
+        }
+
+        .highlight {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer Section */
+        footer {
+            background-color: #111;
+            padding: 20px;
+            text-align: center;
+            color: #FEFAE0; /* Light Beige */
+            font-size: 1rem;
+            letter-spacing: 1px;
+            box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.5);
+            margin-top: 50px;
+            width: 100%;
+        }
+
+        footer p {
+            color: #DDA15E; /* Warm Yellow */
+        }
+
+        /* Mobile-friendly Styles */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .content .image {
+                width: 200px;
+                height: 200px;
+            }
+
+            .content h2 {
+                font-size: 2rem;
+            }
+
+            .content p {
+                font-size: 1rem;
+            }
+
+            footer p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>To The Most Amazing Mom</h1>
+        <p>A tribute to the one who makes the world brighter.</p>
+    </header>
+
+    <main>
+        <section class="content">
+            <!-- Circular Image of Mom -->
+            <div class="image">
+                <img src="/20240103_194123.jpg" alt="Beautiful Mom" />
+            </div>
+            <div class="text">
+                <h2>Mom, You're the Heart of the Family</h2>
+                <p>
+                    Mom, you're the strength that holds everything together. 
+                    You nurture us, love us unconditionally, and make life so much better just by being you.
+                </p>
+                <p>
+                    Thank you for every hug, every word of advice, and every bit of wisdom. Your presence is a gift.
+                </p>
+            </div>
+        </section>
+
+        <section class="quote">
+            <p class="highlight">"A mother's love is endless. It never fades, it only grows stronger."</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Celebrating Moms | Made with 💖</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the Cool Home Page</title>
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body and background */
+        body {
+            font-family: 'Arial', sans-serif;
+            color: #fff;
+            height: 100vh;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            background-size: 400% 400%;
+            animation: gradientAnimation 15s ease infinite;
+            display: flex;
+            flex-direction: column;
+            overflow-x: hidden;
+        }
+
+        /* Animating background gradient */
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px;
+            text-align: center;
+            z-index: 10;
+        }
+
+        nav a {
+            color: #ff6f61;
+            font-size: 1.2rem;
+            margin: 0 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 2px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        nav a:hover {
+            color: #00d4d9;
+            transform: scale(1.1);
+        }
+
+        /* Header section */
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 5;
+        }
+
+        header h1 {
+            font-size: 4rem;
+            color: #fff;
+            font-weight: bold;
+            letter-spacing: 4px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        header p {
+            font-size: 1.5rem;
+            color: #d4d4d4;
+            margin-top: 10px;
+            opacity: 0;
+            animation: fadeIn 2s ease-out 0.5s forwards;
+        }
+
+        /* Animating text */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Main Content */
+        main {
+            flex: 2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 50px 20px;
+        }
+
+        .content {
+            text-align: center;
+            max-width: 800px;
+            margin: 20px;
+        }
+
+        .content h2 {
+            font-size: 3rem;
+            color: #00d4d9;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        .content p {
+            font-size: 1.2rem;
+            color: #d4d4d4;
+            margin-bottom: 30px;
+            line-height: 1.8;
+            animation: fadeInUp 2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Button style */
+        .cta-button {
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            background: #ff6f61;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        .cta-button:hover {
+            background: #00d4d9;
+            transform: translateY(-5px);
+        }
+
+        /* Footer */
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Features</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="/pages/mom">MOM</a>
+    </nav>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to the Dark Tech World</h1>
+        <p>Discover the future of design and technology. Explore our site to immerse yourself in cutting-edge experiences.</p>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="content">
+            <h2>Innovating the Digital Future</h2>
+            <p>
+                Step into a world where technology meets creativity. We design solutions that not only work but leave a lasting impression.
+                Our platform is built for those who dare to dream and create with innovation at its core.
+            </p>
+            <button class="cta-button">Learn More</button>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Dark Tech World | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>
